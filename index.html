@@ -17,7 +17,8 @@
       background: #f5f1e8;
       color: #302f29;
       font-family: Arial, sans-serif;
-      line-height: 1.7;
+      line-height: 1.8;
+      text-align: center;
     }
 
     .container {
@@ -30,45 +31,43 @@
       font-size: 11px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      text-align: center;
     }
 
     h1 {
-      font-size: clamp(38px, 8vw, 64px);
+      font-size: clamp(40px, 8vw, 66px);
       font-weight: 400;
-      line-height: 1.1;
+      line-height: 1.15;
       letter-spacing: -2px;
-      text-align: center;
-      margin: 24px 0;
+      margin: 28px 0;
     }
 
     h2 {
-      font-size: 21px;
+      font-size: 22px;
       font-weight: 400;
-      margin-top: 38px;
+      margin: 40px 0 16px;
     }
 
     p {
       font-size: 16px;
+      margin: 16px auto;
+      max-width: 540px;
     }
 
     .intro {
       font-size: 19px;
-      max-width: 520px;
-      margin: 0 auto 24px;
-      text-align: center;
+      margin: 0 auto 26px;
     }
 
     .details {
       border-top: 1px solid #c9c1b3;
       border-bottom: 1px solid #c9c1b3;
-      padding: 20px 0;
-      margin: 28px 0;
+      padding: 24px 0;
+      margin: 36px 0;
     }
 
     .price {
-      font-size: 23px;
-      margin-bottom: 0;
+      font-size: 28px;
+      margin: 8px 0;
     }
 
     .muted {
@@ -79,6 +78,7 @@
     .dates {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     .dates li {
@@ -86,16 +86,20 @@
       border-bottom: 1px solid #ddd6c9;
     }
 
+    .dates li:last-child {
+      border-bottom: none;
+    }
+
     .button {
-      display: block;
-      width: fit-content;
-      margin: 24px auto 0;
-      padding: 14px 26px;
+      display: inline-block;
+      margin: 28px auto 0;
+      padding: 15px 34px;
       background: #302f29;
       color: #fff;
       text-decoration: none;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       font-size: 13px;
+      transition: background 0.2s ease;
     }
 
     .button:hover {
@@ -103,18 +107,18 @@
     }
 
     footer {
-      margin-top: 55px;
-      padding-top: 20px;
+      margin-top: 60px;
+      padding-top: 22px;
       border-top: 1px solid #c9c1b3;
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-align: center;
+      font-size: 11px;
+      letter-spacing: 3px;
     }
   </style>
 </head>
 
 <body>
   <main class="container">
+
     <div class="eyebrow">A SPACE · CREATIVE PRACTICE</div>
 
     <h1>Living With<br>Pattern</h1>
@@ -126,8 +130,8 @@
 
     <p>
       Choose your starting point: simple geometric patterns,
-      nature-inspired forms, or sacred geometry. Follow your
-      curiosity and see where the process takes you.
+      nature-inspired forms, or sacred geometry.
+      Follow your curiosity and see where the process takes you.
     </p>
 
     <p>
@@ -137,18 +141,22 @@
     </p>
 
     <section class="details">
-      <div class="eyebrow">The experience</div>
+      <div class="eyebrow">THE EXPERIENCE</div>
+
       <p><strong>Saturday · 2 hours</strong></p>
+
       <p class="price">RM60 <span class="muted">/ person</span></p>
+
       <p class="muted">
-        Basic drawing materials included. Bring your own
-        sketchbook, journal, and favourite drawing tools
-        if you'd like to explore further.
+        Basic drawing materials included.
+        Bring your own sketchbook, journal, and favourite
+        drawing tools if you'd like to explore further.
       </p>
     </section>
 
     <section>
-      <h2>Choose your Saturday</h2>
+      <h2>Choose Your Saturday</h2>
+
       <ul class="dates">
         <li>24 October · 2–4 PM</li>
         <li>31 October · 2–4 PM</li>
@@ -161,22 +169,20 @@
     <section>
       <h2>Location</h2>
       <p>Private residence, Kuala Lumpur</p>
-      <p class="muted">
-        Exact location will be shared upon confirmation.
-      </p>
+      <p class="muted">Exact location will be shared upon confirmation.</p>
     </section>
 
     <section>
-      <h2>Payment & commitment</h2>
+      <h2>Payment & Commitment</h2>
       <p>
         Full payment of RM60 is required to reserve your place.
-        Payments are non-refundable but may be transferred
-        once to the next available session. Transfer requests
-        must be made before the session begins.
+        Payments are non-refundable but may be transferred once
+        to the next available session. Transfer requests must
+        be made before the session begins.
       </p>
     </section>
 
-    <p style="text-align: center;">
+    <p>
       No experience needed.<br>
       <strong>Just come curious.</strong>
     </p>
@@ -189,6 +195,7 @@
     >SIGN UP ↗</a>
 
     <footer>A SPACE · LIVING WITH PATTERN</footer>
+
   </main>
 </body>
 </html>
