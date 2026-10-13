@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Living With Pattern — A Space</title>
-  <meta name="description" content="A casual pattern-making experience in Kuala Lumpur. Slow down, explore patterns and create through drawing.">
+  <meta name="description" content="A two-hour pattern-making experience in Kuala Lumpur. Slow down, explore patterns and create at your own pace.">
 
   <style>
     * {
@@ -17,89 +18,136 @@
       background: #f5f1e8;
       color: #302f29;
       font-family: Arial, sans-serif;
-      line-height: 1.8;
+      line-height: 1.65;
       text-align: center;
     }
 
     .container {
-      max-width: 680px;
+      width: min(100% - 40px, 560px);
       margin: 0 auto;
-      padding: 64px 24px 80px;
+      padding: 48px 0 36px;
     }
 
     .eyebrow {
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 3px;
-      text-transform: uppercase;
+      color: #777064;
     }
 
     h1 {
-      font-size: clamp(40px, 8vw, 66px);
-      font-weight: 400;
-      line-height: 1.15;
+      font-size: clamp(38px, 9vw, 58px);
+      line-height: 1.08;
       letter-spacing: -2px;
-      margin: 28px 0;
-    }
-
-    h2 {
-      font-size: 22px;
       font-weight: 400;
-      margin: 40px 0 16px;
+      margin: 22px 0 12px;
     }
 
-    p {
-      font-size: 16px;
-      margin: 16px auto;
-      max-width: 540px;
+    .tagline {
+      font-size: 15px;
+      margin: 0 0 24px;
+    }
+
+    .artwork {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #e9e2d5;
+      border: 1px solid #d8cfbf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      overflow: hidden;
+    }
+
+    .artwork svg {
+      width: 100%;
+      height: 100%;
     }
 
     .intro {
-      font-size: 19px;
+      font-size: 16px;
+      max-width: 460px;
+      margin: 0 auto 12px;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #6d695f;
+      max-width: 450px;
       margin: 0 auto 26px;
     }
 
-    .details {
+    .booking {
       border-top: 1px solid #c9c1b3;
       border-bottom: 1px solid #c9c1b3;
-      padding: 24px 0;
-      margin: 36px 0;
+      padding: 22px 0;
+      margin: 26px 0;
     }
 
     .price {
-      font-size: 28px;
-      margin: 8px 0;
+      font-size: 32px;
+      line-height: 1.3;
+      margin: 4px 0;
     }
 
-    .muted {
+    .price-note {
       color: #6d695f;
-      font-size: 14px;
-    }
-
-    .dates {
-      list-style: none;
-      padding: 0;
+      font-size: 13px;
       margin: 0;
     }
 
-    .dates li {
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd6c9;
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 10px;
+      margin-top: 22px;
     }
 
-    .dates li:last-child {
-      border-bottom: none;
+    .detail-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #777064;
+      margin-bottom: 4px;
+    }
+
+    .detail-value {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .dates {
+      margin: 28px 0;
+    }
+
+    .dates h2 {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .date-list {
+      font-size: 14px;
+      color: #555147;
+      line-height: 2;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #6d695f;
+      margin: 20px auto;
+      max-width: 440px;
     }
 
     .button {
-      display: inline-block;
-      margin: 28px auto 0;
-      padding: 15px 34px;
+      display: block;
       background: #302f29;
       color: #fff;
       text-decoration: none;
+      padding: 15px 20px;
+      margin: 24px auto 0;
+      max-width: 280px;
+      font-size: 12px;
       letter-spacing: 2px;
-      font-size: 13px;
-      transition: background 0.2s ease;
     }
 
     .button:hover {
@@ -107,11 +155,21 @@
     }
 
     footer {
-      margin-top: 60px;
-      padding-top: 22px;
-      border-top: 1px solid #c9c1b3;
-      font-size: 11px;
+      margin-top: 40px;
+      font-size: 10px;
       letter-spacing: 3px;
+      color: #777064;
+    }
+
+    @media (max-width: 380px) {
+      .container {
+        width: calc(100% - 32px);
+        padding-top: 36px;
+      }
+
+      .details {
+        gap: 14px 4px;
+      }
     }
   </style>
 </head>
@@ -123,64 +181,81 @@
 
     <h1>Living With<br>Pattern</h1>
 
+    <p class="tagline">
+      Slow down. Explore patterns. Create.
+    </p>
+
+    <div class="artwork" aria-label="Decorative geometric pattern illustration">
+      <svg viewBox="0 0 560 315" role="img" aria-label="An abstract geometric pattern">
+        <g fill="none" stroke="#776d5b" stroke-width="1.2">
+          <circle cx="280" cy="157" r="105"/>
+          <circle cx="280" cy="157" r="75"/>
+          <circle cx="280" cy="157" r="45"/>
+          <circle cx="280" cy="82" r="75"/>
+          <circle cx="280" cy="232" r="75"/>
+          <circle cx="205" cy="157" r="75"/>
+          <circle cx="355" cy="157" r="75"/>
+          <circle cx="227" cy="104" r="75"/>
+          <circle cx="333" cy="104" r="75"/>
+          <circle cx="227" cy="210" r="75"/>
+          <circle cx="333" cy="210" r="75"/>
+          <path d="M280 40 L382 157 L280 274 L178 157 Z"/>
+          <path d="M175 95 L385 219 M175 219 L385 95"/>
+        </g>
+        <g fill="#b7a78b">
+          <circle cx="280" cy="157" r="4"/>
+          <circle cx="280" cy="52" r="3"/>
+          <circle cx="280" cy="262" r="3"/>
+          <circle cx="175" cy="157" r="3"/>
+          <circle cx="385" cy="157" r="3"/>
+        </g>
+      </svg>
+    </div>
+
     <p class="intro">
       A casual pattern-making experience for anyone who wants
       to slow down, explore patterns, and create through drawing.
     </p>
 
-    <p>
-      Choose your starting point: simple geometric patterns,
-      nature-inspired forms, or sacred geometry.
-      Follow your curiosity and see where the process takes you.
+    <p class="description">
+      Explore simple geometric patterns, nature-inspired forms,
+      or sacred geometry. Receive guidance along the way and
+      create at your own pace.
     </p>
 
-    <p>
-      You'll receive guidance along the way, but there is no
-      right or wrong way to create. Work at your own pace
-      and enjoy the process.
-    </p>
+    <section class="booking">
+      <div class="eyebrow">2-HOUR EXPERIENCE</div>
+      <p class="price">RM60</p>
+      <p class="price-note">Per person · Basic materials included</p>
 
-    <section class="details">
-      <div class="eyebrow">THE EXPERIENCE</div>
+      <div class="details">
+        <div>
+          <div class="detail-label">WHEN</div>
+          <p class="detail-value">Saturday<br>2–4 PM</p>
+        </div>
 
-      <p><strong>Saturday · 2 hours</strong></p>
-
-      <p class="price">RM60 <span class="muted">/ person</span></p>
-
-      <p class="muted">
-        Basic drawing materials included.
-        Bring your own sketchbook, journal, and favourite
-        drawing tools if you'd like to explore further.
-      </p>
+        <div>
+          <div class="detail-label">WHERE</div>
+          <p class="detail-value">Private residence<br>Kuala Lumpur</p>
+        </div>
+      </div>
     </section>
 
-    <section>
+    <section class="dates">
       <h2>Choose Your Saturday</h2>
-
-      <ul class="dates">
-        <li>24 October · 2–4 PM</li>
-        <li>31 October · 2–4 PM</li>
-        <li>7 November · 2–4 PM</li>
-        <li>21 November · 2–4 PM</li>
-        <li>28 November · 2–4 PM</li>
-      </ul>
+      <div class="date-list">
+        24 Oct · 31 Oct · 7 Nov<br>
+        21 Nov · 28 Nov 2026
+      </div>
     </section>
 
-    <section>
-      <h2>Location</h2>
-      <p>Private residence, Kuala Lumpur</p>
-      <p class="muted">Exact location will be shared upon confirmation.</p>
-    </section>
-
-    <section>
-      <h2>Payment & Commitment</h2>
-      <p>
-        Full payment of RM60 is required to reserve your place.
-        Payments are non-refundable but may be transferred once
-        to the next available session. Transfer requests must
-        be made before the session begins.
-      </p>
-    </section>
+    <p class="note">
+      Exact location will be shared upon confirmation.
+      Full payment is required to reserve your place.
+      Payments are non-refundable but transferable once
+      to the next available session. Requests must be made
+      before the session begins.
+    </p>
 
     <p>
       No experience needed.<br>
@@ -192,7 +267,7 @@
       href="https://tally.so/r/Pdae75"
       target="_blank"
       rel="noopener noreferrer"
-    >SIGN UP ↗</a>
+    >RESERVE YOUR SPACE ↗</a>
 
     <footer>A SPACE · LIVING WITH PATTERN</footer>
 
