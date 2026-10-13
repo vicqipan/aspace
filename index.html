@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Living With Pattern — A Space</title>
   <meta name="description" content="A casual pattern-making experience in Kuala Lumpur. Slow down, explore patterns and create through drawing.">
-  <link rel="stylesheet" href="style.css">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #f5f1e8;
@@ -19,7 +22,7 @@
 
     .container {
       max-width: 680px;
-      margin: auto;
+      margin: 0 auto;
       padding: 64px 24px 80px;
     }
 
@@ -27,6 +30,7 @@
       font-size: 11px;
       letter-spacing: 3px;
       text-transform: uppercase;
+      text-align: center;
     }
 
     h1 {
@@ -34,7 +38,8 @@
       font-weight: 400;
       line-height: 1.1;
       letter-spacing: -2px;
-      margin: 24px 0 12px;
+      text-align: center;
+      margin: 24px 0;
     }
 
     h2 {
@@ -50,6 +55,8 @@
     .intro {
       font-size: 19px;
       max-width: 520px;
+      margin: 0 auto 24px;
+      text-align: center;
     }
 
     .details {
@@ -80,8 +87,9 @@
     }
 
     .button {
-      display: inline-block;
-      margin-top: 24px;
+      display: block;
+      width: fit-content;
+      margin: 24px auto 0;
       padding: 14px 26px;
       background: #302f29;
       color: #fff;
@@ -100,6 +108,7 @@
       border-top: 1px solid #c9c1b3;
       font-size: 12px;
       letter-spacing: 2px;
+      text-align: center;
     }
   </style>
 </head>
@@ -167,7 +176,10 @@
       </p>
     </section>
 
-    <p>No experience needed.<br><strong>Just come curious.</strong></p>
+    <p style="text-align: center;">
+      No experience needed.<br>
+      <strong>Just come curious.</strong>
+    </p>
 
     <a
       class="button"
